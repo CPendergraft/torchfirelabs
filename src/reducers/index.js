@@ -4,6 +4,7 @@ import {
     REQUEST_ILLUSTRATIONS, RECEIVE_ILLUSTRATIONS
 } from '../actions'
 import audioStore from './audioStore';
+import caseStore from './caseStore';
 
 const selectedIllustrations = (state = 'reactjs', action) => {
     switch (action.type) {
@@ -12,6 +13,14 @@ const selectedIllustrations = (state = 'reactjs', action) => {
         default:
             return state
     }
+}
+const selectItem = (state , action) => {
+
+    return {...state, selectedItem: action.selectedItem}
+}
+const selectSection = (state , action) => {
+
+    return {...state, selectedSection: action.selectedSection}
 }
 
 const posts = (state = {
@@ -60,8 +69,11 @@ const postsByillustrations = (state = { }, action) => {
 
 const rootReducer = combineReducers({
     postsByillustrations,
+    selectItem,
     selectedIllustrations,
-    audio: audioStore
+    selectSection,
+    audio: audioStore,
+    caseStore:caseStore
 })
 
 export default rootReducer

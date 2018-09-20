@@ -32,11 +32,11 @@ class Posts extends Component {
 }
 
    render(){
-        let rowSize = 230;
+        let rowSize = 440;
         console.log('rowSize', rowSize);
        const captionStyle = {
            backgroundColor: "rgba(0, 0, 0, 0.8)",
-           maxHeight: "240px",
+           maxHeight: "440px",
            overflow: "hidden",
            position: "absolute",
            bottom: "0",

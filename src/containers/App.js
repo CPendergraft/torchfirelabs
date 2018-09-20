@@ -134,7 +134,7 @@ class App extends Component {
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
-                    </Navbar>;
+                    </Navbar>
 
 
 
@@ -194,12 +194,12 @@ class App extends Component {
                     <div   className="row logo_list_top" ><h1>Projects</h1></div>
                     <div  className="row projects" >
                         <div   className="col-lg-3 col-sm-12 pad_top" >
-                            <img  alt="songart" src={require("../images/clarity3.png")} />
+                            <a href="http://offplanet.earth/gravity"   ><img  alt="songart" src={require("../images/clarity3.png")} /></a>
                         </div>
 
                         <div   className="col-lg-8 col-sm-12 pad_left  " >
                             <h2>Clarity for Soundcloud</h2>
-                            <h4 ><i>A clarification user interface for soundcloud with advanced search</i></h4>
+                            <h4 ><i>A clarification user interface for Soundcloud with advanced search</i></h4>
 
                             <p>Clarity works as an 0Auth application that lets you log in to soundcloud with your identity. Once the page has loaded your stream is displayed in a visual format. A user can filter it down between uploads, reposts, and playlists.
                                 Users can comment, repost and like all track uploads. This allows your stream to become manageable, and to filter the repost noise so you don't miss anyt releases of artist you folow.
@@ -220,32 +220,18 @@ class App extends Component {
 
                     <div  className="row projects" >
                         <div   className="col-lg-3 col-sm-12 pad_top pad_bottom" >
-                            <img  alt="songart" src={require("../images/sickluggage.png")} />
+                            <a href="http://offplanet.earth/sickluggage"   > <img  alt="songart" src={require("../images/sickluggage.png")} /></a>
                         </div>
 
                         <div   className="col-lg-8 col-sm-12 pad_left  " >
                             <h2>SICKLUGGAGE - Co-founder & CTO</h2>
                             <h4 ><i>A durrable, skinnable, transformational boom box</i></h4>
 
-                            <p>We live in the most social world humans have ever known, yet individually we are lost, lonely and starving for connection. We are “innovating” for our own demise at a reckless rate…
-                                and this is very bad for us.
-                                More than a boombox, we are building a cultural podium – with enough power to change the future.
+                            <p>
+                                More than a boombox, we are building a cultural podium – with enough power to change the future, one boombox at a time.
                                 <br/>
                                 <br/>
-                                Our solution to social isolation comes from music itself, and carries with it implications far beyond music alone. As a category creating product, Sickluggage promises more human connections through personal
-                                public expression. More people listening and talking together, moving as one, asking questions and gaining perspective on the world. <br/>
-                                <br/>
-                                SICKLUGGAGE is ideally positioned to deliver on all 3 of these categories and more – we compete on:   <br/>
-                                <ul>
-                                    <li>Head-turning Style</li>
-                                    <li> Portable/Wearable</li>
-                                        <li>Customizable/Interchangeable</li>
-                                            <li>Gathering Power</li>
-                                                <li>High Fidelity Sound Clarity</li>
-                                                    <li>Long Battery Life</li>
-                                                        <li>Vibeface Design Patent</li>
-                                                            <li>Consumer GETDOWN App</li>
-                                </ul>
+
 
                             </p>
                         </div>
@@ -253,7 +239,7 @@ class App extends Component {
                     </div>
                     <div id="projects"  className="row projects" >
                         <div   className="col-lg-3 col-sm-12 pad_top pad_bottom" >
-                            <img  alt="songart" src={require("../images/givv.png")} />
+                            <a href="http://givvnow.com"   > <img  alt="songart" src={require("../images/givv.png")} /></a>
                         </div>
 
                         <div   className="col-lg-8 col-sm-12 pad_left  " >
@@ -313,11 +299,11 @@ class App extends Component {
 
                             <div className="para_pad border_bottom" >
                                 <p>
-                                    I have over 20 years of experience as an illustrator, working for start-ups, countless bands, and a few game companies. I draw a graphic novels but
-                                    was trained in oilpainting and printmaking.
+                                    I have over 20 years of experience as an illustrator, working for start-ups, countless bands, and a few game companies.
+                                    I was trained in oil painting and printmaking.
                                     I practice both traditional and digital mediums, and I variate from job to job, based on need.
                                     My normal workflow is mixed media: Airbrush, ink, drawing and painting.
-                                    I also do digital illustration with a Wacom Cintiq. I also paint with oil, creating paintings that may take months to complete.
+                                    I also do digital illustration with a Wacom Cintiq.
                                 </p>
 
                             </div>

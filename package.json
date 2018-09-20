@@ -1,6 +1,7 @@
 {
   "name": "offplanet",
   "version": "0.1.0",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "ajv": "^6.0.0",
@@ -16,9 +17,10 @@
     "react-bootstrap": "0.32.1",
     "react-dom": "^16.4.2",
     "react-grid-gallery": "^0.5.1",
-    "react-media-player": "^0.7.3",
     "react-parallax": "^1.8.0",
     "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-spinners": "^0.4.4",
     "redux": "^3.5.2",
@@ -31,5 +33,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "externals": {
+    "react": {"commonjs": "react"},
+    "react-dom": {"commonjs": "react-dom"}
+  }
 }

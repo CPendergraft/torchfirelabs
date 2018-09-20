@@ -79,14 +79,37 @@ class AudioPlayer extends Component {
         return hold;
         }
 
+    getBreakpoint(){
+
+        let isMobile = false;
+
+        const breakpoints = {
+            desktop: 1040,
+            tablet: 840,
+            mobile: 414
+        };
+
+        if (window.innerWidth > breakpoints.tablet) {
+
+        } else if (window.innerWidth > breakpoints.mobile) {
+
+        } else if (window.innerWidth <= breakpoints.mobile) {
+            isMobile = true;
+        }
+
+        return isMobile;
+    }
+
 
     render() {
+        const isMobile = this.getBreakpoint();
 
         const {playerid, showIframe, removeiframe} = this.state;
         let classes = showIframe ? 'iframeholder' : 'iframeholder-hide';
         let bar_classes = showIframe ? 'control_bar' : 'control_bar-hide';
         console.log("playerid",playerid);
         let test=this.getList();
+        let _class = isMobile?"audio_player_holder_mobile":"audio_player_holder"
 
         let currentURL = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/"+ playerid +"&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=true&show_teaser=true&visual=true"
          console.log("currentURL",currentURL);
@@ -99,7 +122,7 @@ class AudioPlayer extends Component {
                     <iframe title="soundcloud" onClick={()=> this.closeIframe()} width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay"
                         src={currentURL}></iframe>
                  </div>}
-                <div className="audio_player_holder">{test} </div>
+                <div className={_class}>{test} </div>
             </div>
     );
     }

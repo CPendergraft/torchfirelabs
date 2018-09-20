@@ -2,6 +2,8 @@ export const REQUEST_ILLUSTRATIONS = 'REQUEST_ILLUSTRATIONS';
 export const RECEIVE_ILLUSTRATIONS = 'RECEIVE_ILLUSTRATIONS';
 export const SELECT_ILLUSTRATIONS = 'SELECT_ILLUSTRATIONS';
 export const INVALIDATE_ILLUSTRATIONS = 'INVALIDATE_ILLUSTRATIONS';
+export const SELECT_ITEM = 'SELECT_ITEM';
+export const SELECT_SECTION = 'SELECT_SECTION';
 
 export const selectIllustrations = illustrations => ({
     type: SELECT_ILLUSTRATIONS,
@@ -29,14 +31,14 @@ export const receiveIllustrations = (illustrations, json) => (
     }
 );
 
-const fetchPosts = illustrations => dispatch => {
+export const fetchPosts = illustrations => dispatch => {
     dispatch(requestIllustrations(illustrations))
     return fetch(`https://www.offplanet.earth/webrest/wp-json/wp/v2/illustration?per_page=100`)
         .then(response => response.json())
         .then(json => dispatch(receiveIllustrations(illustrations, json)))
 };
 
-const shouldFetchPosts = (state, illustrations) => {
+export const shouldFetchPosts = (state, illustrations) => {
     const posts = state.postsByillustrations[illustrations]
     if (!posts) {
         return true
@@ -52,3 +54,14 @@ export const fetchPostsIfNeeded = illustrations => (dispatch, getState) => {
         return dispatch(fetchPosts(illustrations))
     }
 };
+
+export const selectItem = selectedItem => ({
+    type: SELECT_ITEM,
+    selectedItem
+});
+
+export const selectSection = selectedSection => ({
+    type: SELECT_SECTION,
+    selectedSection
+});
+
